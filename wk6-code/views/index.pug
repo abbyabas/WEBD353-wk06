@@ -1,0 +1,118 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Wedding planning for cross-cultural couples. Traditions are complex and sensitive. Our platform provides you with the tools you need to successfully plan a cross-cultural wedding.")
+        meta(name="keywords" content="Wedding Planning, Cross-cultural, Online Planning Tool, Ethnic Wedding")
+        meta(name="author" content="Interweve Weddings")
+        link(rel="shortcut icon" href="images/favicon.png")
+        link(href="css/bootstrap.css" rel="stylesheet")
+        link(rel="stylesheet" type="text/css" href="css/default.css")
+        link(rel="stylesheet" type="text/css" href="css/component.css")
+        link(rel="stylesheet" type="text/css" href="css/stylesheet_demo.css")
+        link(href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css")
+        link(rel="stylesheet" href="css/animate.css")
+        link(rel="stylesheet" href="css/tourtipguide.css")
+        link(href='https://fonts.googleapis.com/css?family=Raleway:400,700,300' rel='stylesheet' type='text/css')
+        script(src="js/modernizr.custom.js")
+    body(class="nl-blurred")
+        include ./header.pug
+        nav(class="secondarynav")
+            div(class="container")
+                a(class="submit" href="addEvent") ADD EVENT
+                div(class="right")
+                    a(href="#" id="view-thumb")
+                        span(class="glyphicon glyphicon-th-large" aria-hidden="true")
+                    a(href="#" id="view-list")
+                        span(class="glyphicon glyphicon-th-list" aria-hidden="true")
+        include ./questionairre.pug
+        div(id="loader")
+            div(class="spinner")
+                div(class="rect1")
+                div(class="rect2")
+                div(class="rect3")
+                div(class="rect4")
+                div(class="rect5")
+            h2 Planning your cross-cultural wedding
+            h4 (this might take a minute)
+        div(id="content")
+            div(class="container")
+                div(class="row")
+                    div(class="col-md-3 tourtipguide" data-ttg-idx="2" data-ttg-position="right" data-ttg-title="Sort Your Events" data-ttg-content="Sort your wedding events by culture or date.")
+                        div(class="weddingdate")
+                            div(class="couplename") Rob's & Milo's Wedding
+                            div(class="daysuntil")
+                                div 168 
+                                | days until
+                                br
+                                | wedding
+                            div(class="sortbutton") Sort: 
+                            a(href='#') Most Recent
+                        div(class="persian" id="persian") Persian Events
+                        div(class="portugese" id="portugese") Portuguese Events
+                        div(class="tradition" id="tradition") Non-traditional Events
+                    div(class="col-md-9")
+                        -var wedding_events = events
+                        -for(var i in wedding_events)
+                            if(i==0)
+                                div(id= i, class="event tourtipguide" data-ttg-idx="1" data-ttg-title="Wedding Events" data-ttg-content="Based on the cultural backgrounds you enter, we auto populate a timeline with common events from your cultural backgrounds. We suggest a date for the event, based on your wedding date.")
+                                    div(class="closebtn tourtipguide"  data-event-id=wedding_events[i].id id="end-open" data-ttg-idx="4" data-ttg-position="left" data-ttg-title="Remove Event" data-ttg-content="Delete an event from your timeline.")
+                                        img(src="images/close_btn.png")
+                                    div(class="row")
+                                        div(class="date col-md-2" class= wedding_events[i].type)
+                                            div(class="daysuntil")
+                                                div= wedding_events[i].days 
+                                                | days
+                                                br 
+                                                | away
+                                        div(class="details col-md-10")
+                                            div(class="eventname") #{wedding_events[i].name}
+                                            div(class="eventdate") #{wedding_events[i].date}
+                                            ul
+                                                li
+                                                    a(class="detailbtn tourtipguide" href="#" data-ttg-idx="3" data-ttg-title="Event Details" data-ttg-content="Provides you with an overview of the cultural practices for the event.")
+                                                        img(src="images/event_icon.png")
+                                                        span Event Details
+                                                li
+                                                    a(class="collaboratebtn" href="#")
+                                                        img(src="images/collaborate_grey.png")
+                                                        span Collaborate
+                                                li
+                                                    a(class="vendorbtn" href="#")
+                                                        img(src="images/vendors_grey.png")
+                                                        span Find A Vendor
+                            else
+                                div(id= i, class="event")
+                                    div(class="closebtn")
+                                        img(src="images/close_btn.png")
+                                    div(class="row")
+                                        div(class="date col-md-2" class= wedding_events[i].type)
+                                            div(class="daysuntil")
+                                                div= wedding_events[i].days 
+                                                | days
+                                                br 
+                                                | away
+                                        div(class="details col-md-10")
+                                            div(class="eventname") #{wedding_events[i].name}
+                                            div(class="eventdate") #{wedding_events[i].date}
+                                            ul
+                                                li
+                                                    a(class="detailbtn" href="#")
+                                                        img(src="images/event_icon.png")
+                                                        span Event Details
+                                                li
+                                                    a(class="collaboratebtn" href="#")
+                                                        img(src="images/collaborate_grey.png")
+                                                        span Collaborate
+                                                li
+                                                    a(class="vendorbtn" href="#")
+                                                        img(src="images/vendors_grey.png")
+                                                        span Find A Vendor
+        script(src='/js/jquery-1.11.3.min.js')
+        script(src='/js/nlform.js')
+        script(src='/js/tourtipguide.js')
+        script(src='/js/myscript.js')
+        section(id="overlay") &nbsp
+        include ./footer.pug

@@ -1,0 +1,282 @@
+body {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: #969696;
+}
+
+h1 {
+    font-size: 5.4rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+li {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    padding: 20px;
+}
+label {
+    float:left;
+}
+.navbar a:hover {
+    text-decoration: none;
+    opacity: .5;
+}
+
+#belief img {
+    margin-bottom: 5px;
+}
+
+.navbar .active {
+    opacity: .5;
+}
+
+.navbar a {
+    transition: .5s;
+}
+
+.navbar {
+    text-align: left;
+}
+
+.logo {
+    margin: 16px 0rem;
+    width: 135px;
+}
+
+header {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+section {
+    padding-top: 12rem;
+}
+
+#home,
+#contacthero,
+#abouthero {
+    background-image: url("../images/contact_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 50rem;
+    position: relative;
+    color: #fff;
+    padding-bottom: 10rem;
+}
+
+#home h2,
+#contacthero h2,
+#abouthero h2 {
+    margin-bottom: 6rem;
+    font-weight: 300;
+}
+
+#contacthero {
+    background-image: url("../images/contact_bg_02.jpg");
+}
+
+#abouthero {
+    background-image: url("../images/about_bg.jpg");
+}
+
+#contacthero a:link,
+#contacthero a:visited {
+    font-weight: 300;
+    color: #fff;
+    transition: .5s ease all;
+}
+
+#contacthero a:hover,
+#contacthero a:active {
+    opacity: .5;
+    transition: .5s ease all;
+    text-decoration: underline;
+}
+
+#home a:link,
+#home a:visited {
+    color: #FFF;
+    text-align: center;
+    padding: 1.2rem 2.4rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 0.4rem;
+    transition: all 0.5s ease 0s;
+}
+
+#home a:hover,
+#home a:active {
+    background: #969696;
+    transition: .5s ease;
+    font-weight: 400;
+}
+
+#features {
+    padding-top: 4rem;
+}
+
+#features h2 {
+    margin-top: .5rem;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #A7ABDD;
+    letter-spacing: .15rem;
+}
+
+.feature {
+    margin-bottom: 5rem;
+}
+
+.feature-img {
+    width: 4.8rem;
+}
+
+#contact,
+#demo,
+#belief {
+    padding-bottom: 10rem;
+    padding-top: 2rem;
+}
+
+#contact h2,
+#demo h2,
+#belief h2 {
+    color: #A7ABDD;
+    font-weight: 700;
+}
+
+#mc_embed_signup {
+    background: #fff;
+}
+
+#mc_embed_signup input.email {
+    padding: 8px 0px;
+    margin: 0px 0px 10px 0px;
+    text-indent: 5px;
+    width: 40%;
+    min-width: 130px;
+    text-align: center;
+}
+
+#mc_embed_signup input {
+    border: .1rem solid #4D4D4D;
+    border-radius: .4rem;
+}
+
+#mc_embed_signup #mc-embedded-subscribe {
+    border: 0rem;
+}
+
+.submit {
+    padding: .8rem 2.4rem;
+    background-color: #A7ABDD;
+    color: #fff;
+    transition: .5s ease;
+}
+
+.submit:hover {
+    background: #969696;
+}
+
+footer {
+    padding: .5rem;
+}
+
+footer p {
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0px;
+    text-transform: uppercase;
+}
+
+.navbar ul {
+    float: right;
+    margin-top: 26px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #A7ABDD;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+@media (min-width: 1200px) {}
+
+@media (max-width: 992px) {
+    .feature {
+        margin-bottom: 2.5rem;
+    }
+    #features {
+        padding-top: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 3.6rem;
+        font-weight: 700;
+    }
+    h2 {
+        font-size: 2.4rem;
+    }
+    p {
+        font-size: 1.8rem;
+    }
+    .logo {
+        width: 14rem;
+        margin-top: 1.6rem;
+    }
+    .navbar {
+        text-align: center;
+    }
+    .navbar ul {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        padding-bottom: 1.2rem;
+    }
+    .navbar ul li {
+        display: block;
+        padding: 5px;
+        margin-bottom: 0rem;
+    }
+    section {
+        padding-top: 2rem;
+    }
+    #home {
+        min-height: 3.6rem;
+        padding-top: 1.6rem;
+        padding-bottom: 5rem;
+    }
+    #home h2 {
+        margin-bottom: 6rem;
+        font-weight: 300;
+    }
+    #features,
+    #belief {
+        padding-bottom: 4rem;
+    }
+    #mc_embed_signup input.email {
+        width: 60%;
+    }
+}
